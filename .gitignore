@@ -11,3 +11,4 @@ secure.php
 *.swp
 .DS_Store*
 thumbs.db
+.vagrant/

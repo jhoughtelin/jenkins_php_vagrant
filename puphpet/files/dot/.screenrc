@@ -1,0 +1,115 @@
+SIC SETTINGS        #######
+########################################
+startup_message off                     # No MOTD when starting screen
+altscreen off                           # Disabled becuase it breaks scrollback
+msgwait 10                              # 
+nonblock on                             # Don't halt everything if a window is unresponsive
+defnonblock 5                           # <3 Flaky SSH
+defutf8 on                              # Default: UTF8
+utf8 on                                 # Default: UTF8 ??
+autodetach on                           # D/C if I D/C plz
+#nethack on                             # wtf is this?
+shelltitle "$ |bash"                    # Replace shell title
+defbce on                               # Enable Background Color ??
+#defhstatus "$USER@H"                   # ????
+attrcolor b ".I"                        # ???? reassigning color???
+sorendition "+b Gk"                     # make messages stand out more
+activity "%c activity -> %n%f %t"       # Custom activity bell notifier
+bell "%c bell -> %n%f %t^G"             # More custom bell shit
+shell bash                               # plzkthxbai
+multiuser on                            # ??
+aclchg :window: +x select               # Enables the use of commands from screen escape sequences?
+
+########################################
+#######   TERMINAL SETTINGS      #######
+########################################
+term screen-256color                                    #
+termcapinfo vt100 dl=5\E[M                              # ??
+termcapinfo xterm*|rxvt*|kterm*|terminator*|Eterm* hs:ts=\E]0;:fs=\007:ds=\E]0;\007
+termcapinfo xterm ti@:te@                                # Supposed to Enable scroll-wheel
+termcapinfo xterm*|linux*|rxvt*|Eterm* OP                #Optimize Term status over ASCII
+termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l' #Window resize bugfix
+
+
+########################################
+#######     CREATE WINDOWS       #######
+########################################
+#screen -t BOSS         0       ssh boss        # Home Network Gateway/Ubuntu Server
+#screen -t CodeSrc.US   1       ssh code        # CodeSrc.US
+#screen -t Zewa         2       ssh zewa        # ZEWADesign.com
+#screen -t IIMGroup     3       ssh iimgroup    # IMPACT INTERNATIONAL MARKETING Development Server
+#screen -t LOGS         5       tail -f /var/log/system.log
+
+########################################
+#######         BIND KEYS        #######
+########################################
+#escape ^zz                                     # Escape is now (Ctrl-Z)
+bind ',' prev
+bind '.' next
+#bind "^\]" prev                                # Previous window with ctrl-left
+#bind "^\[" next                                # Next window with ctrl-right
+bind = resize =
+bind + resize +1
+bind - resize -1
+bind _ resize max
+bind c screen 1                                 # Window numbering starts at 1, not 0.
+bind 0 select 10
+
+
+########################################
+#######     VISUAL STYLES        #######
+########################################
+caption always "%{+u kg} %L=%-Lw%45>%{r Yk}%n%f* %t%{-}%+Lw%-0<"
+# A+++  DISPLAYS Load sys Loa
+hardstatus alwayslastline "%{kr}[ %H ] %{ky} Load: %l %-=%{-b kg} %?%F%:%?%C|%D|%M|%d|%Y"
+
+###########################################
+###     CPU/MEM/HDD USAGE DISPLAY       ###
+###           FAIL.FAIL.FAIL            ###
+# backticks to display information in the statusbar
+# git clone https://github.com/thewtex/screen-cpu-mem.git
+# cmake . && make && sudo make install
+#backtick 1 0 0 /usr/local/bin/screen-mem-usage
+#backtick 2 0 0 /usr/local/bin/screen-cpu-usage
+#hardstatus string '%{= kG}[%{G}%H%{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{W}%1`%{-} %2`%{-}%{w}]'
+#hardstatus string '%{= kG}[%{G}%H%{g}][%{W}%l%{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%1`%{-} %2`%{-}][%{G}%C:%s%a | %M %d(%D), %Y%{g}]'
+#[%{G}%C:%s%a | %D, %d/%m/%Y%{g}]
+
+
+#########################################
+#########################################
+#######     DOCUMENTATION       #########
+#########################################
+#########################################
+
+
+# caption description:
+#       caption always "%?%F%{-b bc}%:%{-b bb}%?%C|%D|%M %d|%H%?%F%{+u wb}%? %L=%-Lw%45>%{+b by}%n%f* %t%{-}%+Lw%-0<"
+#
+# %?       - Start of a conditional statement.
+# %F       - Use this part of the statement if the window has focus (i.e. is the only window or the currently active one).
+# %{-b bc} - Turn off bold, blue foreground, cyan background.
+# %:       - else
+# %{-b bb} - Turn off bold, blue foreground, blue background (this obscures the text on non-focused windows and just gives a blue line).
+# %?       - End conditional statement.
+# %C       - time (hh:mm, leading space) in 12 hour format
+# %D       - Three-letter day-of-week appreviation
+# %M       - Three-letter month appreviation
+# %d       - Day of the month
+# %H       - hostname
+# %?       - Start of conditional statement.
+# %F       - Use this part of the statement if the window has focus.
+# %{+u wb} - underlined, white foreground, blue background
+# %?       - End conditional (if not focused, text remaind blue on blue).
+# %L=      - truncation/padding point.  With the 'L' qualifier, basically just acts as a reference point.  
+#               Further truncation/padding is done relative to here, not the beginning of the string
+# %-Lw     - window list up to but not including the current window (-), show window flags (L)
+# %45>     - truncation/padding marker; place this point about 45% of the way into the display area (45)
+# %{+b by} - add bold (still underlined from before), blue foreground, yellow background
+# %n       - number of the current window
+# %f       - flags for current window
+# %t       - title of current window
+# %{-}     - undo last color change (so now we're back to underlined white on blue)  
+#               (technically, this is a pop; a second invocation would drop things back to unadorned blue on cyan)
+# %+Lw     - window list from the next window on (-), show window flags (L)
+# %-0<     - truncation/padding point.  Place this point zero spaces (0) from the right margin (-).

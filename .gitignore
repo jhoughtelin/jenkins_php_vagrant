@@ -1,0 +1,13 @@
+# Ignorance is bliss #
+######################
+*.ca-crt
+*.crt
+*.csr
+*.key
+.htaccess
+config.php
+secure.php
+*.LCK
+*.swp
+.DS_Store*
+thumbs.db

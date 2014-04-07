@@ -14,7 +14,7 @@ echo "deb http://pkg.jenkins-ci.org/debian binary/" >> /etc/apt/sources.list
 apt-get update
 
 # Install Jenkins
-apt-get --assume-yes install jenkins
+apt-get --force-yes install jenkins
 
 # Start Jenkins
 /etc/init.d/jenkins start

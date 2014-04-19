@@ -28,3 +28,8 @@ java -jar jenkins-cli.jar -s http://localhost:8080 install-plugin checkstyle clo
 
 # Restart Jenkins
 java -jar jenkins-cli.jar -s http://localhost:8080 safe-restart
+
+
+# Simply fwd apache's port 80 to Jenkins 8080 for now.
+echo "<?php header('location: http://'.$_SERVER['SERVER_NAME'].':8080');" > /var/www/index.php
+rm -f /var/www/index.html

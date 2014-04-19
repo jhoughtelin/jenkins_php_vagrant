@@ -73,12 +73,12 @@ apache:
         - php
         - rewrite
     vhosts:
-        JuFmvzzSFna0:
+        phpdev:
             servername: php.dev
             serveraliases:
                 - www.php.dev
-            docroot: /vagrant/www/apache/
-            port: '9000'
+            docroot: /var/www
+            port: '80'
             setenv:
                 - 'APP_ENV dev'
             override:

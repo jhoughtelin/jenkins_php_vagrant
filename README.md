@@ -10,9 +10,9 @@ The initial provisioning of the virtual machine can take a good 10 minutes
 or longer depending on your internet connection and workstation but every use
 after the initial spins up much quicker.
 
-`git clone https://github.com/jhoughtelin/jenkins_php_vagrant.git`
-`cd jenkins_php_vagrant`
-`vagrant up`
+`git clone https://github.com/jhoughtelin/jenkins_php_vagrant.git`  
+`cd jenkins_php_vagrant`  
+`vagrant up`  
 
 Then simply access your local Jenkins continuous integration virtual machine with
 a web browser http://10.11.12.13

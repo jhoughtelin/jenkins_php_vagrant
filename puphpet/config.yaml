@@ -25,6 +25,11 @@ vagrantfile-local:
                     - '--verbose'
                     - '--hiera_config /vagrant/puphpet/puppet/hiera.yaml'
                     - '--parser future'
+        synced_folder:
+            jenkinshome:
+                source: ./jenkins/
+                target: /home/jenkins
+                nfs: 'false'
         usable_port_range: 2200..2250
     ssh:
         host: null

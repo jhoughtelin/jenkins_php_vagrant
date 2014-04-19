@@ -28,31 +28,31 @@ the original vagrant+puppet configuration.
 
 ### CI Server
 * [Jenkins](https://wiki.jenkins-ci.org)
-** checkstyle plugin
-** cloverphp  plugin
-** dry  plugin
-** htmlpublisher  plugin
-** jdepend  plugin
-** plot  plugin
-** pmd  plugin
-** violations  plugin
-** xunit  plugin
-** php  plugin
-** git plugin
+    * checkstyle plugin
+    * cloverphp  plugin
+    * dry  plugin
+    * htmlpublisher  plugin
+    * jdepend  plugin
+    * plot  plugin
+    * pmd  plugin
+    * violations  plugin
+    * xunit  plugin
+    * php  plugin
+    * git plugin
 
 ### Environment
 * PHP 5.5
-** intl
-** cli
-** mcrypt
-** curl
-** memcache
-** memcached
-** imagick
+    * intl
+    * cli
+    * mcrypt
+    * curl
+    * memcache
+    * memcached
+    * imagick
 
 * Apache (Port 80)
-** ReWrite
-** PHP
+    * ReWrite
+    * PHP
 
 ### Tools & Resources
 * PHP CodeSniffer

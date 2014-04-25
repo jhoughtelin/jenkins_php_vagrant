@@ -12,3 +12,4 @@ secure.php
 .DS_Store*
 thumbs.db
 .vagrant/
+.idea/

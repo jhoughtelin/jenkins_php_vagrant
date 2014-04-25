@@ -44,7 +44,7 @@ wget http://localhost:8080/jnlpJars/jenkins-cli.jar
 
 # Install Jenkins Plugins
 echo "### Try to install the PHP Plugins for Jenkins."
-java -jar jenkins-cli.jar -s http://localhost:8080 install-plugin checkstyle cloverphp dry htmlpublisher jdepend plot pmd violations xunit php git
+java -jar jenkins-cli.jar -s http://localhost:8080 install-plugin Checkstyle cloverphp dry htmlpublisher jdepend plot pmd violations xunit php git
 
 # Restart Jenkins
 java -jar jenkins-cli.jar -s http://localhost:8080 safe-restart

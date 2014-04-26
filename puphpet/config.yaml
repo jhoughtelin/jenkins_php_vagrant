@@ -3,13 +3,16 @@ vagrantfile-local:
     vm:
         box: debian-wheezy72-x64-vbox43
         box_url: 'http://box.puphpet.com/debian-wheezy72-x64-vbox43.box'
-        hostname: php.dev
+        hostname: 'null'
         network:
             private_network: 10.11.12.13
             forwarded_port:
-                Ws9tekhcpiQT:
+                SSHD:
                     host: '9492'
                     guest: '22'
+                Jenkins:
+                    host: '8000'
+                    guest: '8080'
         provider:
             virtualbox:
                 modifyvm:

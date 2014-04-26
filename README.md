@@ -1,7 +1,7 @@
 Jenkins VM for PHP w/Vagrant!
 =============================
 
-Quite possibly the easiest (and quickest!) starting point for those
+This is an extremely easy to use & very quick starting point for those
 wanting to take Jenkins Continuous Integration Server for a spin in 
 your PHP app development life-cycle.
 

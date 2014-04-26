@@ -696,12 +696,22 @@ if hash_key_equals($php_values, 'install', 1) {
   if count($php_values['modules']['php']) > 0 {
     php_mod { $php_values['modules']['php']:; }
   }
+
   if count($php_values['modules']['pear']) > 0 {
-    php_pear_mod { $php_values['modules']['pear']:; }
+    each( $php_values['modules']['pear'] ) |$key, $module| {
+       php::pear::module { $key:
+         repository          => $module['repository'],
+         alldeps             => $module['alldeps'],
+         use_package         => 'false',
+         service_autorestart => $php_webserver_restart
+       }
+    }
   }
+
   if count($php_values['modules']['pecl']) > 0 {
     php_pecl_mod { $php_values['modules']['pecl']:; }
   }
+
   if count($php_values['ini']) > 0 {
     each( $php_values['ini'] ) |$key, $value| {
       if is_array($value) {
@@ -765,14 +775,7 @@ define php_mod {
     }
   }
 }
-define php_pear_mod {
-  if ! defined(Php::Pear::Module[$name]) {
-    php::pear::module { $name:
-      use_package         => false,
-      service_autorestart => $php_webserver_restart,
-    }
-  }
-}
+
 define php_pecl_mod {
   if ! defined(Php::Pecl::Module[$name]) {
     php::pecl::module { $name:

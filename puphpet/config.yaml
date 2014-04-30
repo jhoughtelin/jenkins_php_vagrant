@@ -122,8 +122,39 @@ php:
             - memcached
             - imagick
         pear:
-            - PHP_CodeSniffer
-            - PHP_DocBlockGenerator
+            PHP_Depend:
+                repository: 'pear.pdepend.org'
+                alldeps: 'false'
+            PHP_PMD:
+                repository: 'pear.phpmd.org'
+                alleps: 'true'
+            phpDocumentor:
+                repository: 'pear.phpdoc.org'
+                alldeps: 'false'
+            PHP_Timer:
+                repository: 'pear.phpunit.de'
+                alldeps: 'false'
+            phpcpd:
+                repository: 'pear.phpunit.de'
+                alldeps: 'false'
+            phploc:
+                repository: 'pear.phpunit.de'
+                alldeps: 'false'
+            phpdcd-beta:
+                repository: 'pear.phpunit.de'
+                alldeps: 'false'
+            DbUnit:
+                repository: 'pear.phpunit.de'
+                alldeps: 'false'
+            PHPUnit:
+                repository: 'pear.phpunit.de'
+                alldeps: 'false'
+            phing:
+                repository: 'pear.phing.info'
+                alldeps: 'true'
+            Archive_Tar: ''
+            HTTP_Request2: ''
+            PHP_CodeSniffer: ''
         pecl:
             - pecl_http
     ini:

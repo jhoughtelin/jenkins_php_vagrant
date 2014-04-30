@@ -9,7 +9,7 @@ echo "# "
 
 echo "# Discovering Package Channels."
 pear config-set auto_discover 1
-pear channel-discover pear.phpmd.orgf
+pear channel-discover pear.phpmd.org
 pear channel-discover pear.pdepend.org
 pear channel-discover pear.phing.info
 pear channel-discover pear.phpdoc.org

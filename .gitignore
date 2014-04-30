@@ -13,3 +13,4 @@ secure.php
 thumbs.db
 .vagrant/
 .idea/
+jenkins-cli.jar

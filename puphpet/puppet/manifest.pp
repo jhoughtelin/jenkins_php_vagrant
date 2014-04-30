@@ -699,12 +699,19 @@ if hash_key_equals($php_values, 'install', 1) {
 
   if count($php_values['modules']['pear']) > 0 {
     each( $php_values['modules']['pear'] ) |$key, $module| {
-       php::pear::module { $key:
-         repository          => $module['repository'],
-         alldeps             => $module['alldeps'],
-         use_package         => 'false',
-         service_autorestart => $php_webserver_restart
-       }
+      if(is_hash($module)){
+        php::pear::module { $key:
+          repository          => $php_values['modules']['pear'][$key]['repository'],
+          alldeps             => $php_values['modules']['pear'][$key]['alldeps'],
+          use_package         => 'no',
+          service_autorestart => $php_webserver_restart
+        }
+      } else {
+        php::pear::module { $key:
+          use_package         => 'no',
+          service_autorestart => $php_webserver_restart
+        }
+      }
     }
   }
 

@@ -40,11 +40,17 @@ echo " Hopefully Jenkins is alive now.  GO GO GO! ";
 
 # Get Jenkins CLI Tool
 cd /home/jenkins
-wget http://localhost:8080/jnlpJars/jenkins-cli.jar
+if [[ ! -f /home/jenkins/jenkins-cli.jar ]]; then
+	echo "# Copying Jenkins Command Line Tool Shared folder ./jenkins/ on Host"
+	wget http://localhost:8080/jnlpJars/jenkins-cli.jar
+fi
+
+# Force update Jenkins update center
+curl -L http://updates.jenkins-ci.org/update-center.json | sed '1d;$d' | curl -X POST -H 'Accept: application/json' -d @- http://localhost:8080/updateCenter/byId/default/postBack
 
 # Install Jenkins Plugins
 echo "### Try to install the PHP Plugins for Jenkins."
-java -jar jenkins-cli.jar -s http://localhost:8080 install-plugin Checkstyle cloverphp dry htmlpublisher jdepend plot pmd violations xunit php git
+java -jar jenkins-cli.jar -s http://localhost:8080 install-plugin checkstyle cloverphp dry htmlpublisher jdepend plot pmd violations xunit php git phing
 
 # Restart Jenkins
 java -jar jenkins-cli.jar -s http://localhost:8080 safe-restart

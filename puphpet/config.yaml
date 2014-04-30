@@ -50,6 +50,7 @@ server:
     packages:
         - vim
         - screen
+        - ant
     dot_files:
         -
             bash_aliases: null

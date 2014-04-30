@@ -151,7 +151,7 @@ php:
                 alldeps: 'false'
             phing:
                 repository: 'pear.phing.info'
-                alldeps: 'true'
+                alldeps: 'false'
             Archive_Tar: ''
             HTTP_Request2: ''
             PHP_CodeSniffer: ''

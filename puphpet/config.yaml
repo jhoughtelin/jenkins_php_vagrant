@@ -124,8 +124,6 @@ php:
             - memcached
             - imagick
             - xsl
-            - dom
-            - libxml
         pear:
             PHP_Depend:
                 repository: 'pear.pdepend.org'

@@ -50,7 +50,7 @@ curl -L http://updates.jenkins-ci.org/update-center.json | sed '1d;$d' | curl -X
 
 # Install Jenkins Plugins
 echo "### Try to install the PHP Plugins for Jenkins."
-java -jar jenkins-cli.jar -s http://localhost:8080 install-plugin checkstyle cloverphp dry htmlpublisher jdepend plot pmd violations xunit php git phing
+java -jar jenkins-cli.jar -s http://localhost:8080 install-plugin checkstyle cloverphp dry htmlpublisher jdepend plot pmd violations xunit php git phing build-pipeline-plugin dashboard-view
 
 # Restart Jenkins
 java -jar jenkins-cli.jar -s http://localhost:8080 safe-restart

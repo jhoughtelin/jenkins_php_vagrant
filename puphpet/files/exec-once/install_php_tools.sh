@@ -12,5 +12,5 @@ wget https://phar.phpunit.de/phpunit.phar
 chmod +x phpunit.phar
 mv phpunit.phar /usr/local/bin/phpunit
 
-# Update PEAR (Although it should alraedy be current)
+# Update PEAR (Although it should already be current)
 pear upgrade PEAR

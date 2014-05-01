@@ -123,6 +123,9 @@ php:
             - memcache
             - memcached
             - imagick
+            - xsl
+            - dom
+            - libxml
         pear:
             PHP_Depend:
                 repository: 'pear.pdepend.org'
@@ -150,6 +153,12 @@ php:
                 alldeps: 'false'
             phing:
                 repository: 'pear.phing.info'
+                alldeps: 'false'
+            fDOMDocument:
+                repository: 'pear.netpirates.net'
+                alldeps: 'false'
+            phpDox-0.6.5:
+                repository: 'pear.netpirates.net'
                 alldeps: 'false'
             Archive_Tar: ''
             HTTP_Request2: ''

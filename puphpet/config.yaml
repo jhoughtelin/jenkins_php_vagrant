@@ -3,7 +3,7 @@ vagrantfile-local:
     vm:
         box: debian-wheezy72-x64-vbox43
         box_url: 'http://box.puphpet.com/debian-wheezy72-x64-vbox43.box'
-        hostname: 'null'
+        hostname: 'jenkins.gitphp.com'
         network:
             private_network: 10.11.12.13
             forwarded_port:
@@ -51,12 +51,13 @@ server:
         - vim
         - screen
         - ant
+        - zsh
     dot_files:
         -
             bash_aliases: null
     _prevent_empty: ''
 mailcatcher:
-    install: 0
+    install: '0'
     settings:
         smtp_ip: 0.0.0.0
         smtp_port: 1025
@@ -78,10 +79,10 @@ apache:
         - rewrite
     vhosts:
         phpdev:
-            servername: php.dev
+            servername: jenkins.gitphp.com
             serveraliases:
-                - www.php.dev
-            docroot: /var/www
+                - www.jenkins.gitphp.com
+            docroot: /home/jenkins
             port: '80'
             setenv:
                 - 'APP_ENV dev'
@@ -145,9 +146,6 @@ php:
                 repository: 'pear.phpunit.de'
                 alldeps: 'false'
             DbUnit:
-                repository: 'pear.phpunit.de'
-                alldeps: 'false'
-            PHPUnit:
                 repository: 'pear.phpunit.de'
                 alldeps: 'false'
             phing:

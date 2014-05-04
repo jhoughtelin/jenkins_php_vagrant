@@ -50,6 +50,7 @@ the original vagrant+puppet scripts.
     * Git plugin
     * Dashboard-View Plugin
     * Build-Pipeline Plugin
+    
 ### Environment
 * PHP 5.5
     * intl
@@ -63,6 +64,7 @@ the original vagrant+puppet scripts.
 * Apache (Port 80)
     * ReWrite
     * PHP
+
 ### Tools & Resources
 * Composer
 * PHP Unit

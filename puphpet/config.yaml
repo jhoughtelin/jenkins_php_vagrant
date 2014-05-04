@@ -79,9 +79,9 @@ apache:
         - rewrite
     vhosts:
         phpdev:
-            servername: jenkins.gitphp.com
+            servername: jenkins.dev
             serveraliases:
-                - www.jenkins.gitphp.com
+                - www.jenkins.dev
             docroot: /home/jenkins
             port: '80'
             setenv:

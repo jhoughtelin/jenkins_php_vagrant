@@ -28,7 +28,7 @@ You must have the following software installed in order for this to work.
 This VM is based on a Debian Wheezy 7.2 x64 box furnished by http://puphpet.com along with
 the original vagrant+puppet scripts.
 
-## OS Packages
+### OS Packages
 * Vim
 * Screen
 * zsh
@@ -41,16 +41,15 @@ the original vagrant+puppet scripts.
     * Clover php plugin
     * DRY plugin
     * Html Publisher  plugin
-    * JDepend  plugin
-    * Plot  plugin
-    * PMD  plugin
-    * Violations  plugin
-    * XUnit  plugin
-    * PHP  plugin
+    * JDepend plugin
+    * Plot plugin
+    * PMD plugin
+    * Violations plugin
+    * XUnit plugin
+    * PHP plugin
     * Git plugin
     * Dashboard-View Plugin
     * Build-Pipeline Plugin
-
 ### Environment
 * PHP 5.5
     * intl
@@ -60,24 +59,23 @@ the original vagrant+puppet scripts.
     * memcache
     * memcached
     * imagick
-
+    * xsl
 * Apache (Port 80)
     * ReWrite
     * PHP
-
 ### Tools & Resources
-* PEAR
-* Pecl
-* Phing
-* PHP CodeSniffer
-* PHP Documentor
-* PHP Unit
-* PHPLoc
-* PHP Mess Detector
-* PHPDox
-* PDepend
-* PHP Copy/Paste Detector
-* fDOMDocument
 * Composer
-* DBUnit
-
+* PHP Unit
+* PEAR
+    * PHP Code Sniffer
+    * PHP Documentor
+    * Phing
+    * PHPLoc
+    * PHP Mess Detector
+    * PDepend
+    * PHP Copy/Paste Detector
+    * PHPDox
+    * fDOMDocument
+    * DBUnit
+* Pecl
+    * Pecl_http

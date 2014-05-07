@@ -30,6 +30,7 @@ vagrantfile-local:
                     - '--parser future'
         synced_folder:
             jenkinshome:
+                id: 'jenkinshome'
                 source: ./jenkins
                 target: /home/jenkins
                 nfs: 'false'

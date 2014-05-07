@@ -11,7 +11,7 @@ vagrantfile-local:
                     host: '9492'
                     guest: '22'
                 Jenkins:
-                    host: '8000'
+                    host: '8001'
                     guest: '8080'
         provider:
             virtualbox:
@@ -51,7 +51,6 @@ server:
         - vim
         - screen
         - ant
-        - zsh
     dot_files:
         -
             bash_aliases: null
@@ -70,7 +69,7 @@ apache:
     settings:
         user: www-data
         group: www-data
-        default_vhost: true
+        default_vhost: false
         manage_user: false
         manage_group: false
         sendfile: 0
@@ -99,7 +98,7 @@ nginx:
     install: 0
     vhosts:
         zWBpQO58YAcd:
-            server_name: php.dev
+            server_name: jenkins.dev
             server_aliases:
                 - www.php.dev
             www_root: /vagrant/www/nginx/

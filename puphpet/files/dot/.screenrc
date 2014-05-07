@@ -16,7 +16,7 @@ attrcolor b ".I"                        # ???? reassigning color???
 sorendition "+b Gk"                     # make messages stand out more
 activity "%c activity -> %n%f %t"       # Custom activity bell notifier
 bell "%c bell -> %n%f %t^G"             # More custom bell shit
-shell zsh                               # plzkthxbai
+shell bash                               # plzkthxbai
 multiuser on                            # ??
 aclchg :window: +x select               # Enables the use of commands from screen escape sequences?
 

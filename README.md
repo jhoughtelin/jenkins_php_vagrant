@@ -17,7 +17,7 @@ Get started with Jenkins for PHP in 10 minutes:
 3. `vagrant up`  
 
 Then simply access your local Jenkins continuous integration virtual machine with
-a web browser (http://10.11.12.13) or (http://localhost:8000)
+a web browser (http://10.11.12.13) or (http://localhost:8001)
 
 ## Dependancies / Requirements ##
 You must have the following software installed in order for this to work.
@@ -50,7 +50,7 @@ the original vagrant+puppet scripts.
     * Git plugin
     * Dashboard-View Plugin
     * Build-Pipeline Plugin
-    
+
 ### Environment
 * PHP 5.5
     * intl

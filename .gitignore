@@ -14,3 +14,16 @@ thumbs.db
 .vagrant/
 .idea/
 jenkins-cli.jar
+
+# Jenkins working directory files #
+###################################
+/jenkins/hudson.*
+/jenkins/updates/
+/jenkins/secrets/
+/jenkins/plugins/
+/jenkins/jobs/
+/jenkins/identity.key.enc
+/jenkins/queue.*
+/jenkins/secret.*
+/jenkins/nodeMonitors.xml
+/jenkins/userContent

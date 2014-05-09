@@ -17,21 +17,21 @@ echo "### Updating Apt"
 apt-get update >/dev/null
 echo "### Installing Jenkins"
 apt-get --yes --force-yes install jenkins
-/etc/init.d/jenkins stop
+#/etc/init.d/jenkins stop
 
-echo "### Replace Jenkins default startup configuration"
-mv /etc/default/jenkins /etc/default/jenkins.orig
-cp /home/jenkins/conf/jenkins.conf /etc/default/jenkins
+#echo "### Replace Jenkins default startup configuration"
+#mv /etc/default/jenkins /etc/default/jenkins.orig
+#cp /home/jenkins/conf/jenkins.conf /etc/default/jenkins
 
-echo "### Move jenkins home folder"
-cp -R /var/lib/jenkins /home/jenkins
-usermod -d /home/jenkins jenkins
+#echo "### Move jenkins home folder"
+#cp -R /var/lib/jenkins /home/jenkins
+#usermod -d /home/jenkins jenkins
 
-echo "### Starting Jenkins with permanent config"
-/etc/init.d/jenkins start
+#echo "### Starting Jenkins with permanent config"
+#/etc/init.d/jenkins start
 
-echo "### and we wait... 30s. "
-sleep 10s
+#echo "### and we wait... 30s. "
+#sleep 10s
 echo " 20s. "
 sleep 10s
 echo " 10s. "

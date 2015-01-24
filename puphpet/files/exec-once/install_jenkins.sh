@@ -30,7 +30,7 @@ apt-get --yes --force-yes install jenkins
 #echo "### Starting Jenkins with permanent config"
 #/etc/init.d/jenkins start
 
-cho "### and we wait... 30s. "
+echo "### and we wait... 30s. "
 sleep 10s
 echo " 20s. "
 sleep 10s

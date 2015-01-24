@@ -134,28 +134,10 @@ php:
             phpDocumentor:
                 repository: 'pear.phpdoc.org'
                 alldeps: 'false'
-            PHP_Timer:
-                repository: 'pear.phpunit.de'
-                alldeps: 'false'
-            phpcpd:
-                repository: 'pear.phpunit.de'
-                alldeps: 'false'
-            phploc:
-                repository: 'pear.phpunit.de'
-                alldeps: 'false'
-            phpdcd-beta:
-                repository: 'pear.phpunit.de'
-                alldeps: 'false'
-            DbUnit:
-                repository: 'pear.phpunit.de'
-                alldeps: 'false'
             phing:
                 repository: 'pear.phing.info'
                 alldeps: 'false'
             fDOMDocument:
-                repository: 'pear.netpirates.net'
-                alldeps: 'false'
-            phpDox-0.6.5:
                 repository: 'pear.netpirates.net'
                 alldeps: 'false'
             Archive_Tar: ''

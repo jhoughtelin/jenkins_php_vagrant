@@ -36,5 +36,15 @@ wget http://phpdox.de/releases/phpdox.phar
 chmod +x phpdox.phar
 mv phpdox.phar /usr/local/bin/phpdox
 
+# Install PHPMD
+wget -c http://static.phpmd.org/php/latest/phpmd.phar
+chmod +x phpmd.phar
+mv phpmd.phar /usr/local/bin/phpmd
+
+# Install PDepend
+wget http://static.pdepend.org/php/latest/pdepend.phar
+chmod +x pdepend.phar
+mv pdepend.phar /usr/local/bin/pdepend
+
 # Update PEAR (Although it should already be current)
 pear upgrade PEAR
